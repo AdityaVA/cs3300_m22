@@ -8,7 +8,7 @@
  #include <stdio.h>
  #include <string.h>
  #include <stdlib.h>
-
+ 
  int yylex (void);
 /* The parser repetedly calls
 
@@ -53,7 +53,7 @@ term: NUM
 %%
 
 void yyerror (const char *s) {
-  printf ("Parser Error: Unexpected syntax\n");
+  printf ("Parser Error: Unexpected syntax %s\n", s);
 }
 
 int main () {

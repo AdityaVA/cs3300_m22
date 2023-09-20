@@ -3,7 +3,7 @@ INTEGER [+-]?{DIGIT}+
 
 %%
 
-[ \t] { }
+[" "\t] { }
 
 {INTEGER} {
 	return NUM;
@@ -11,6 +11,6 @@ INTEGER [+-]?{DIGIT}+
 
 "+" { return ADD; }
 
-\n { return EOL; }
+"\n" { return EOL; }
 
 . { printf ("Lexer error: %s\n", yytext); exit (1); }

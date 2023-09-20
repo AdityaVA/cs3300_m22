@@ -1,0 +1,192 @@
+assgn.y: warning: 13 shift/reduce conflicts [-Wconflicts-sr]
+assgn.y: warning: shift/reduce conflict on token AND [-Wcounterexamples]
+  Example: NOT primaryExpression . AND primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 33: primaryExpression . AND primaryExpression
+  Reduce derivation
+    expression
+    `-> 33: primaryExpression                       AND primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token OR [-Wcounterexamples]
+  Example: NOT primaryExpression . OR primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 34: primaryExpression . OR primaryExpression
+  Reduce derivation
+    expression
+    `-> 34: primaryExpression                       OR primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token NOT [-Wcounterexamples]
+  Example: NOT primaryExpression . NOT EQ primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 35: primaryExpression . NOT EQ primaryExpression
+  Reduce derivation
+    expression
+    `-> 35: primaryExpression                       NOT EQ primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token LT [-Wcounterexamples]
+  Example: NOT primaryExpression . LT EQ primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 36: primaryExpression . LT EQ primaryExpression
+  Reduce derivation
+    expression
+    `-> 36: primaryExpression                       LT EQ primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token ADD [-Wcounterexamples]
+  Example: NOT primaryExpression . ADD primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 37: primaryExpression . ADD primaryExpression
+  Reduce derivation
+    expression
+    `-> 37: primaryExpression                       ADD primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token SUB [-Wcounterexamples]
+  Example: NOT primaryExpression . SUB primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 38: primaryExpression . SUB primaryExpression
+  Reduce derivation
+    expression
+    `-> 38: primaryExpression                       SUB primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token MUL [-Wcounterexamples]
+  Example: NOT primaryExpression . MUL primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 39: primaryExpression . MUL primaryExpression
+  Reduce derivation
+    expression
+    `-> 39: primaryExpression                       MUL primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token DIV [-Wcounterexamples]
+  Example: NOT primaryExpression . DIV primaryExpression
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 40: primaryExpression . DIV primaryExpression
+  Reduce derivation
+    expression
+    `-> 40: primaryExpression                       DIV primaryExpression
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token LEFTSQUARE [-Wcounterexamples]
+  Example: NOT primaryExpression . LEFTSQUARE primaryExpression RIGHTSQUARE
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 41: primaryExpression . LEFTSQUARE primaryExpression RIGHTSQUARE
+  Reduce derivation
+    expression
+    `-> 41: primaryExpression                       LEFTSQUARE primaryExpression RIGHTSQUARE
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token DOT [-Wcounterexamples]
+  Example: NOT primaryExpression . DOT LENGTH
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 42: primaryExpression . DOT LENGTH
+  Reduce derivation
+    expression
+    `-> 42: primaryExpression                       DOT LENGTH
+            `-> 57: NOT expression
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token DOT [-Wcounterexamples]
+  Example: NOT primaryExpression . DOT IDENTIFIER LEFTPAR RIGHTPAR
+  Shift derivation
+    expression
+    `-> 43: primaryExpression
+            `-> 57: NOT expression
+                        `-> 44: primaryExpression . DOT IDENTIFIER LEFTPAR multipleExpressions RIGHTPAR
+                                                                           `-> 44: %empty
+  Reduce derivation
+    expression
+    `-> 44: primaryExpression                       DOT IDENTIFIER LEFTPAR multipleExpressions RIGHTPAR
+            `-> 57: NOT expression                                         `-> 44: %empty
+                        `-> 43: primaryExpression .
+assgn.y: warning: shift/reduce conflict on token IDENTIFIER [-Wcounterexamples]
+  First example: macroDef mainClass CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR identifierDeclaration . IDENTIFIER IDENTIFIER SEMICOLON multipleIdentifierDeclaration multipleIdentifierDeclaration multipleStatements RETURN expression SEMICOLON RIGHTCURLY multipleMethodDeclaration RIGHTCURLY typeDeclare $end
+  Shift derivation
+    $accept
+    `-> 0: goal                                                                                                                                                                                                                                                                                                                                                                                                                             $end
+           `-> 1: macroDef mainClass typeDeclare
+                                     `-> 4: typeDeclaration                                                                                                                                                                                                                                                                                                                                                                     typeDeclare
+                                            `-> 7: CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration multipleMethodDeclaration                                                                                                                                                                                                                                                                                RIGHTCURLY
+                                                                                                            `-> 13: methodDeclaration                                                                                                                                                                                                                                                      multipleMethodDeclaration
+                                                                                                                    `-> 14: PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR multipleIdentifierDeclaration                                                                                        multipleIdentifierDeclaration multipleStatements RETURN expression SEMICOLON RIGHTCURLY
+                                                                                                                                                                              `-> 11: identifierDeclaration multipleIdentifierDeclaration
+                                                                                                                                                                                                            `-> 11: identifierDeclaration                            multipleIdentifierDeclaration
+                                                                                                                                                                                                                    `-> 9: type                 IDENTIFIER SEMICOLON
+                                                                                                                                                                                                                           `-> 22: . IDENTIFIER
+  Second example: macroDef mainClass CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR LEFTCURLY identifierDeclaration . IDENTIFIER EQ expression SEMICOLON multipleStatements RETURN expression SEMICOLON RIGHTCURLY multipleMethodDeclaration RIGHTCURLY typeDeclare $end
+  Reduce derivation
+    $accept
+    `-> 0: goal                                                                                                                                                                                                                                                                                                                                                                                                   $end
+           `-> 1: macroDef mainClass typeDeclare
+                                     `-> 4: typeDeclaration                                                                                                                                                                                                                                                                                                                                           typeDeclare
+                                            `-> 7: CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration multipleMethodDeclaration                                                                                                                                                                                                                                                      RIGHTCURLY
+                                                                                                            `-> 13: methodDeclaration                                                                                                                                                                                                                            multipleMethodDeclaration
+                                                                                                                    `-> 14: PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR LEFTCURLY multipleIdentifierDeclaration                               multipleStatements                                                    RETURN expression SEMICOLON RIGHTCURLY
+                                                                                                                                                                                        `-> 11: identifierDeclaration multipleIdentifierDeclaration `-> 24: statement                                  multipleStatements
+                                                                                                                                                                                                                      `-> 10: %empty .                      `-> 27: IDENTIFIER EQ expression SEMICOLON
+assgn.y: warning: shift/reduce conflict on token ELSE [-Wcounterexamples]
+  Example: IF LEFTPAR expression RIGHTPAR IF LEFTPAR expression RIGHTPAR statement . ELSE statement
+  Shift derivation
+    statement
+    `-> 29: IF LEFTPAR expression RIGHTPAR statement
+                                           `-> 30: IF LEFTPAR expression RIGHTPAR statement . ELSE statement
+  Reduce derivation
+    statement
+    `-> 30: IF LEFTPAR expression RIGHTPAR statement                                          ELSE statement
+                                           `-> 29: IF LEFTPAR expression RIGHTPAR statement .
+assgn.y: warning: shift/reduce conflict on token IDENTIFIER [-Wcounterexamples]
+  First example: macroDef mainClass CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR LEFTCURLY . IDENTIFIER IDENTIFIER SEMICOLON multipleIdentifierDeclaration multipleStatements RETURN expression SEMICOLON RIGHTCURLY RIGHTCURLY typeDeclare $end
+  Shift derivation
+    $accept
+    `-> 0: goal                                                                                                                                                                                                                                                                                                                                         $end
+           `-> 1: macroDef mainClass typeDeclare
+                                     `-> 4: typeDeclaration                                                                                                                                                                                                                                                                                 typeDeclare
+                                            `-> 7: CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration methodDeclaration                                                                                                                                                                                                    RIGHTCURLY
+                                                                                                            `-> 14: PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR LEFTCURLY multipleIdentifierDeclaration                                                          multipleStatements RETURN expression SEMICOLON RIGHTCURLY
+                                                                                                                                                                                `-> 11: identifierDeclaration                            multipleIdentifierDeclaration
+                                                                                                                                                                                        `-> 9: type                 IDENTIFIER SEMICOLON
+                                                                                                                                                                                               `-> 22: . IDENTIFIER
+  Second example: macroDef mainClass CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR LEFTCURLY . IDENTIFIER EQ expression SEMICOLON multipleStatements RETURN expression SEMICOLON RIGHTCURLY multipleMethodDeclaration RIGHTCURLY typeDeclare $end
+  Reduce derivation
+    $accept
+    `-> 0: goal                                                                                                                                                                                                                                                                                                                                                                     $end
+           `-> 1: macroDef mainClass typeDeclare
+                                     `-> 4: typeDeclaration                                                                                                                                                                                                                                                                                                             typeDeclare
+                                            `-> 7: CLASS IDENTIFIER LEFTCURLY multipleIdentifierDeclaration multipleMethodDeclaration                                                                                                                                                                                                                        RIGHTCURLY
+                                                                                                            `-> 13: methodDeclaration                                                                                                                                                                                              multipleMethodDeclaration
+                                                                                                                    `-> 14: PUBLIC type IDENTIFIER LEFTPAR arguments RIGHTPAR LEFTCURLY multipleIdentifierDeclaration multipleStatements                                                    RETURN expression SEMICOLON RIGHTCURLY
+                                                                                                                                                                                        `-> 10: %empty .              `-> 24: statement                                  multipleStatements
+                                                                                                                                                                                                                              `-> 27: IDENTIFIER EQ expression SEMICOLON

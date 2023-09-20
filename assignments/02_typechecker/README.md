@@ -51,7 +51,7 @@ The MiniJava grammar specification is
 [here](https://www.cse.iitm.ac.in/~krishna/cs3300/minijava-spec.html).
 
 The type checking rules for MiniJava is
-[here](/cs3300_m22/assets/miniJava-typesystem.pdf).
+[here](../../assets/miniJava-typesystem.pdf).
 
 ## Submission
 

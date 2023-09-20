@@ -18,7 +18,7 @@ class BT {
 	ntb = root.Init(16);
 	ntb = root.Print();
 	System.out.println(100000000);
-	ntb = root.Insert(8) ;
+	ntb = root.Insert(8);
 	ntb = root.Print();
 	ntb = root.Insert(24) ;
 	ntb = root.Insert(4) ;

@@ -33,7 +33,7 @@ Fac_ComputeFac:
          sw $fp, -8($sp)
          move $fp, $sp
          subu $sp, $sp, 20
-         sw $ra, -4($fp)
+         sw $ra, -4($fp) // return address, frame pointer below sp and regs afer sp
          sw $s0, 0($sp)
          sw $s1, 4($sp)
          sw $s2, 8($sp)
@@ -66,26 +66,26 @@ L3:      nop
          addu $sp, $sp, 20
          j $ra
 
-         .text
-         .globl _halloc
+        .text
+        .globl _halloc
 _halloc:
-         li $v0, 9
-         syscall
-         j $ra
+        li $v0, 9
+        syscall
+        j $ra
 
-         .text
-         .globl _print
+        .text
+        .globl _print
 _print:
-         li $v0, 1
-         syscall
-         la $a0, newl
-         li $v0, 4
-         syscall
-         j $ra
+        li $v0, 1
+        syscall
+        la $a0, newl
+        li $v0, 4
+        syscall
+        j $ra
 
-         .data
-         .align   0
+        .data
+        .align   0
 newl:    .asciiz "\n" 
-         .data
-         .align   0
+        .data
+        .align   0
 str_er:  .asciiz " ERROR: abnormal termination\n" 

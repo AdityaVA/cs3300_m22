@@ -1,11 +1,7 @@
-demo%.exe: demo%.l
+*.exe: *.l
 	flex $<
-	gcc lex.yy.c -o $@ -ll
+	gcc lex.yy.c -o $.exe -lfl
 
 clean:
 	rm -f lex.yy.c a.out *.exe *~
 
-exercise%.exe: exercise%.l
-	flex $<
-	gcc lex.yy.c -o $@ -lfl
-	#gcc lex.yy.c -o $@ -ll #on macOS

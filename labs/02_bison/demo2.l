@@ -1,5 +1,5 @@
 DIGIT [0-9]
-INTEGER [+-]?{DIGIT}+
+INTEGER {DIGIT}+
 IDENTIFIER [a-z][a-z0-9]*
 
 %%

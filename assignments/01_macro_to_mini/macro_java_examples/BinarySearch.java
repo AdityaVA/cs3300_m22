@@ -1,150 +1,43 @@
-#defineExpr0 ZERO() (0+0)
-#defineExpr0 ONE() (1+0)
-#defineStmt1 print(arg) {System.out.println(arg);} 
-#defineExpr0 LARGE() (9999+0)
-#defineExpr0 INPUT() (20+0)
-class BinarySearch{
-    public static void main(String[] a){
-	System.out.println(new BS().Start(INPUT()));
+#defineExpr HUH(x,y,z) ((x.length)&&y)
+#defineExpr0 WUT() (69)
+#defineExpr1 LOL(x) ((WUT())*x)
+#defineExpr2 WTF(x,y) (x||(HUH(y,x,y)))
+#defineStmt0 FIRST() {x=1;}
+#defineStmt1 SECOND(x) {{x=2;} {FIRST();}}
+#defineStmt2 THIRD(y,z) {{x=3;} {z=y;}}
+#defineStmt FOUR(a,b,c,d,e,f) {{a=b;}{c=a;}{System.out.println(f+(c+d));}}
+#defineStmt1 print1(a) {x=a;}
+#defineStmt2 print1(a, b) {{x=a;}{x=b;}}
+#defineStmt2 print2(a,b) {print1(a); print1(b);}
+
+class BinarySearch 
+{
+	public static void main (String []aa)
+	{
+		System.out.println(LOL(LOL(LOL(LOL(WTF(1,aa))))));
     }
 }
-// This class contains an array of integers and
-// methods to initialize, print and search the array
-// using Binary Search
 
 class BS{
-    int[] number ;
-    int size ;
-
-    // Invoke methods to initialize, print and search
-    // for elements on the array
-    public int Start(int sz){
-	int aux01 ;
-	int aux02 ;
-	aux01 = this.Init(sz);
-	aux02 = this.Print();
-	if (this.Search(8)) {print(ONE());}
-	else {print(ZERO());}
-	if (this.Search(19)) {print(ONE());}
-	else {print(ZERO());}
-	if (this.Search(20)) {print(ONE());}
-	else {print(ZERO());}
-	if (this.Search(21)) {print(ONE());}
-	else {print(ZERO());}
-	if (this.Search(37)) {print(ONE());}
-	else {print(ZERO());}
-	if (this.Search(38)) {print(ONE());}
-	else {print(ZERO());}
-	if (this.Search(39)) {print(ONE());}
-	else {print(ZERO());}
-	if (this.Search(50)) {print(ONE());}
-	else {print(ZERO());}
-
-	return 999 ;
+    int[] lololo;
+    public int div(int y, int z)
+    {
+        int x;
+        FIRST();
+        SECOND(n);
+        FOUR(b, c, 4, f, d, e);
+        print2(b, 4);
+        print1(sad);
+        print1(b, a);
+        return 1;
     }
 
-
-    // Search for a specific value (num) using
-    // binary search
-    public boolean Search(int num){
-	boolean bs01 ;
-	int right ;
-	int left ;
-	boolean var_cont ;
-	int medium ;
-	int aux01 ;
-	int nt ;
-
-	aux01 = 0 ;
-	bs01 = false ;
-	right = number.length ;
-	right = right - 1 ;
-	left = 0 ;
-	var_cont = true ;
-	while (var_cont){
-	    medium = left + right ;
-	    medium = this.Div(medium);
-	    aux01 = number[medium] ;
-	    if (num <= (aux01-1)) right = medium - 1 ;
-	    else left = medium + 1 ;
-	    if (this.Compare(aux01,num)) var_cont = false ;
-	    else var_cont = true ;
-	    if (right <= (left-1)) var_cont = false ;
-	    else nt = 0 ;
-	}
-
-	if (this.Compare(aux01,num)) bs01 = true ;
-	else bs01 = false ;
-	return bs01 ;
+    public bool lmao()
+    {
+        int j;
+        j=this.div(2,3);
+        THIRD(b,4);
+        FOUR(x,y,z,1,1,1);
+        return true;
     }
-
-    // This method computes and returns the
-    // integer division of a number (num) by 2
-    public int Div(int num){
-	int count01 ;
-	int count02 ;
-	int aux03 ;
-
-	count01 = 0 ;
-	count02 = 0 ;
-	aux03 = num - 1 ;
-	while ((count02 <= aux03)&&(count02 != aux03)) {
-	    count01 = count01 + 1 ;
-	    count02 = count02 + 2 ;
-	}
-	return count01 ;	
-    }
-
-    
-    // This method compares two integers and
-    // returns true if they are equal and false
-    // otherwise
-    public boolean Compare(int num1 , int num2){
-	boolean retval ;
-	int aux02 ;
-
-	retval = false ;
-	aux02 = num2 + 1 ;
-	if (num1 <= (num2-1)) retval = false ;
-	else if (!(num1 <= (aux02-1))) retval = false ;
-	else retval = true ;
-	return retval ;
-    }
-
-    // Print the integer array
-    public int Print(){
-	int j ;
-
-	j = 1 ;
-	while ((j <= size)&&(j!=size)) {
-	    System.out.println(number[j]);
-	    j = j + 1 ;
-	}
-	System.out.println(LARGE());
-	return 0 ;
-    }
-    
-
-    // Initialize the integer array
-    public int Init(int sz){
-	int j ;
-	int k ;
-	int aux02 ;
-	int aux01 ;
-
-	size = sz ;
-	number = new int[sz] ;
-	
-	j = 1 ;
-	k = size + 1 ;
-	while (j <= (size-1)) {
-	    aux01 = 2 * j ;
-	    aux02 = k - 3 ;
-	    number[j] = aux01 + aux02 ;
-	    j = j + 1 ;
-	    k = k - 1 ;
-	}
-	return 0 ;	
-    }
-
 }

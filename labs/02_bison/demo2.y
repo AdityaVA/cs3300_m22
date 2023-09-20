@@ -54,7 +54,7 @@ lines:                									 /* empty string */
 		 																				character */
 ;
 
-expr: expr ADD term { printf ("+ "); }
+expr: term ADD { printf ("+ "); } expr 
 		| term
 ;
 

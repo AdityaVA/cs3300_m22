@@ -1,0 +1,44 @@
+defineexpr0 ZERO() (INTEGER+INTEGER)
+defineexpr0 ONE() (INTEGER+INTEGER)
+defstmt1 print(arg) {System.out.println(arg);} 
+defineexpr0 LARGE() (INTEGER+INTEGER)
+defineexpr0 INPUT() (INTEGER+INTEGER)
+class BinarySearch{
+    public static void main(String[] a){
+	System.out.println(new BS().Start(INPUT()));
+    }
+}
+class BS{
+    int[] number ;
+    int size ;
+    public int Start(int sz){
+        int aux01 ;
+        int aux02 ;
+        aux01 = this.Init(sz);
+        aux02 = this.Print();
+        if (this.Search(INTEGER)) {print(ONE());}
+        else {print(ZERO());}
+        if (this.Search(INTEGER)) {print(ONE());}
+	    else {print(ZERO());}
+
+    return aux01;
+    }
+    public boolean Search(int num){
+        boolean bs01 ;
+        int right ;
+        int left ;
+        boolean var_cont ;
+        int medium ;
+        int aux01 ;
+        int nt ;
+        while ((j <= size)) {
+            System.out.println(number[j]);
+            j = j + INTEGER ;
+        }
+        System.out.println(LARGE());
+
+        return x;
+    }
+    
+    
+}
